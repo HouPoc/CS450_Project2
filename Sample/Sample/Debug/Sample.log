@@ -1,7 +1,16 @@
 ﻿  Sample.cpp
-c:\users\poi\desktop\sample1\sample\sample.cpp(693): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\poi\desktop\sample1\sample\sample.cpp(722): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\poi\desktop\sample1\sample\sample.cpp(723): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\poi\desktop\sample1\sample\sample.cpp(724): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\poi\desktop\sample1\sample\sample.cpp(1075): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  Sample.vcxproj -> C:\Users\Poi\Desktop\Sample1\Sample\Debug\Sample.exe
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(59): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(60): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(61): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(64): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(65): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(66): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(81): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(82): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(683): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(681): warning C4101: 'dz': unreferenced local variable
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(681): warning C4101: 'dy': unreferenced local variable
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(681): warning C4101: 'dx': unreferenced local variable
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(684): warning C4101: 'color_picker': unreferenced local variable
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(1024): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Sample.vcxproj -> C:\Users\Poi\Documents\GitHub\CS450_Project2\Sample\Sample\Debug\Sample.exe

@@ -14,12 +14,13 @@
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <GL/glut.h>
+#include "bmptotexture.h"
+#include "sphere.h"
 
 
-//	This is OpenGL / GLUT program #1
+//	This is OpenGL / GLUT program #3
 //
-//	The objective is to draw a out-line of a sphere
-//		with a glut menu
+//	The objective is texture mapping to a sphere
 //
 //	The left mouse button does rotation
 //	The middle mouse button does scaling
@@ -226,7 +227,7 @@ main( int argc, char *argv[ ] )
 
 	// create the display structures that will not change:
 
-	InitLists( );
+	//InitLists( );
 
 
 	// init all the global variables used by Display( ):
@@ -332,7 +333,7 @@ Display( )
 
 	// set the eye position, look-at position, and up-vector:
 
-	gluLookAt( 0., 0., 3.,     0., 0., 0.,     0., 1., 0. );
+	gluLookAt( 0., 0.,15.0,     0., 0., 0.,     0., 1., 0. );
 
 
 	// rotate the scene:
@@ -364,31 +365,21 @@ Display( )
 		glDisable( GL_FOG );
 	}
 
-
-	// possibly draw the axes:
-
-	if( AxesOn != 0 )
-	{
-		glColor3fv( &Colors[WhichColor][0] );
-		glCallList( AxesList );
-	}
-
-
 	// since we are using glScalef( ), be sure normals get unitized:
 
 	glEnable( GL_NORMALIZE );
 
 
 	// draw the current object:
-
-	glCallList( BoxList );
+	Distort = FALSE;
+	glEnable(GL_TEXTURE_2D);
+	MjbSphere(10.0, 50, 50);
+	glDisable(GL_TEXTURE_2D);
 
 
 	// draw some gratuitous text that just rotates on top of the scene:
 
 	glDisable( GL_DEPTH_TEST );
-	glColor3f( 0., 1., 1. );
-	DoRasterString( 0., 1., 0., "Text That Moves" );
 
 
 	// draw some gratuitous text that is fixed on the screen:
@@ -408,7 +399,6 @@ Display( )
 	glMatrixMode( GL_MODELVIEW );
 	glLoadIdentity( );
 	glColor3f( 1., 1., 1. );
-	DoRasterString( 5., 5., 0., "Text That Doesn't" );
 
 
 	// swap the double-buffered framebuffers:
@@ -698,47 +688,6 @@ InitLists( )
 
 	BoxList = glGenLists( 1 );
 	glNewList( BoxList, GL_COMPILE );
-
-		
-		
-			for (float i = 0.0; i < 10.0; i += 1.0) {
-				color_picker = (int)i;
-				switch (color_picker) {
-				case 0: 	glColor3f(1.00, 0.00, 0.00);
-					break;
-				case 2:		glColor3f(0.00, 1.00, 0.00);
-					break;
-				case 4:		glColor3f(1.00, 1.00, 1.00);
-					break;
-				case 6:		glColor3f(0.00, 0.00, 1.00);
-					break;
-				case 8:		glColor3f(1.00, 1.00, 0.00);
-					break;
-
-				}
-				for (float k = 0.0; k < 2.0; k++) {
-					glBegin(GL_LINE_STRIP);
-					for (float j = 0.0; j < 21.0; j += 1.0) {
-						dy = dr * cos(j * pi / 10);
-						dz = dr * sin(j * pi / 10) * cos(i * pi / 10);
-						dx = dr * sin(j * pi / 10) * sin(i * pi / 10);
-						glVertex3f(dx, dy, dz);
-					}
-					glEnd();
-				}
-			}
-
-	glEndList( );
-
-
-	// create the axes:
-
-	AxesList = glGenLists( 1 );
-	glNewList( AxesList, GL_COMPILE );
-		glLineWidth( AXES_WIDTH );
-			Axes( 1.5 );
-		glLineWidth( 1. );
-	glEndList( );
 }
 
 
