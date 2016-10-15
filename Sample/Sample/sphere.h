@@ -24,8 +24,8 @@ PtsPointer( int lat, int lng )
 void
 DrawPoint( struct point *p )
 {
+	glTexCoord2f(p->s, p->t);
 	glNormal3f( p->nx, p->ny, p->nz );
-	glTexCoord2f( p->s, p->t );
 	glVertex3f( p->x, p->y, p->z );
 }
 

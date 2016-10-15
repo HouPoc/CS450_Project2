@@ -180,7 +180,11 @@ int		WhichColor;				// index into Colors[ ]
 int		WhichProjection;		// ORTHO or PERSP
 int		Xmouse, Ymouse;			// mouse values
 float	Xrot, Yrot;				// rotation angles in degrees
-
+unsigned char *Texture;			// texture 
+int		height;
+int		width;
+int level, ncomps, border;
+static GLuint  texName;
 
 // function prototypes:
 
@@ -196,6 +200,7 @@ void	DoRasterString( float, float, float, char * );
 void	DoStrokeString( float, float, float, float, char * );
 float	ElapsedSeconds( );
 void	InitGraphics( );
+void	InitTexture();
 void	InitLists( );
 void	InitMenus( );
 void	Keyboard( unsigned char, int, int );
@@ -223,13 +228,7 @@ main( int argc, char *argv[ ] )
 	// setup all the graphics stuff:
 
 	InitGraphics( );
-
-
-	// create the display structures that will not change:
-
-	//InitLists( );
-
-
+	
 	// init all the global variables used by Display( ):
 	// this will also post a redisplay
 
@@ -274,7 +273,7 @@ Animate( )
 }
 
 
-// draw the complete scene:
+// draw the complete scene: display_1
 
 void
 Display( )
@@ -372,7 +371,9 @@ Display( )
 
 	// draw the current object:
 	Distort = FALSE;
+	InitTexture();
 	glEnable(GL_TEXTURE_2D);
+	glBindTexture(GL_TEXTURE_2D, texName);
 	MjbSphere(10.0, 50, 50);
 	glDisable(GL_TEXTURE_2D);
 
@@ -669,6 +670,24 @@ InitGraphics( )
 
 }
 
+
+void InitTexture() {
+	width = 1024;
+	height = 512;
+	level = 0;
+	ncomps = 3;
+	border = 0;
+	Texture = BmpToTexture("worldtex.bmp", &width, &height);
+	glGenTextures(1, &texName);
+	glBindTexture(GL_TEXTURE_2D, texName);
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+	glTexImage2D(GL_TEXTURE_2D, level, ncomps, width, height, border, GL_RGB, GL_UNSIGNED_BYTE, Texture);
+	}
 
 // initialize the display lists that will not change:
 // (a display list is a way to store opengl commands in
