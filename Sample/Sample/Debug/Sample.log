@@ -1,0 +1,7 @@
+﻿  Sample.cpp
+c:\users\poi\desktop\sample1\sample\sample.cpp(693): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\poi\desktop\sample1\sample\sample.cpp(722): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\desktop\sample1\sample\sample.cpp(723): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\desktop\sample1\sample\sample.cpp(724): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\desktop\sample1\sample\sample.cpp(1075): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Sample.vcxproj -> C:\Users\Poi\Desktop\Sample1\Sample\Debug\Sample.exe
