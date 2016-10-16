@@ -75,8 +75,12 @@ MjbSphere( float radius, int slices, int stacks )
 			p->nz = z;
 			if( Distort )
 			{
+<<<<<<< HEAD
 					p->s = ((lng + M_PI) / (2.*M_PI) + Time);
 
+=======
+					p->s = ((lng + M_PI) / (2.*M_PI)+ Time/(2.*M_PI));
+>>>>>>> refs/remotes/origin/master
 					p->t = ( lat + M_PI/2. ) / M_PI;
 					printf("time %f \n", Time);
 			}
