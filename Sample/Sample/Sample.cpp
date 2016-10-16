@@ -259,7 +259,7 @@ main( int argc, char *argv[ ] )
 // this is typically where animation parameters are set
 //
 // do not call Display( ) from here -- let glutMainLoop( ) do it
-#define MS_PER_CYCLE 6000
+#define MS_PER_CYCLE 24000
 
 
 void
@@ -270,7 +270,6 @@ Animate( )
 	int ms = glutGet(GLUT_ELAPSED_TIME);
 	ms %= MS_PER_CYCLE;
 	Time = (float)ms / (float)MS_PER_CYCLE;		// [0.,1.)
-	printf("Time %f \n", Time);
 	// force a call to Display( ) next time it is convenient:
 	glutSetWindow( MainWindow );
 	glutPostRedisplay( );
@@ -374,12 +373,11 @@ Display( )
 
 
 	// draw the current object:
-	Distort = FALSE;
+	Distort = TRUE;
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D, texName);
 	MjbSphere(10.0, 50, 50);
 	glDisable(GL_TEXTURE_2D);
-	glDeleteTextures(1, &texName);
 
 	// draw some gratuitous text that just rotates on top of the scene:
 
