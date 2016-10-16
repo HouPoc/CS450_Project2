@@ -1,18 +1,22 @@
 ﻿  Sample.cpp
-c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(60): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(61): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(62): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(65): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(63): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(66): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(67): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(77): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(68): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(78): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(82): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(79): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(83): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(703): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(701): warning C4101: 'dz': unreferenced local variable
-c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(701): warning C4101: 'dy': unreferenced local variable
-c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(701): warning C4101: 'dx': unreferenced local variable
-c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(704): warning C4101: 'color_picker': unreferenced local variable
-c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(1044): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(84): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(101): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(121): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(142): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(734): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(732): warning C4101: 'dz': unreferenced local variable
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(732): warning C4101: 'dy': unreferenced local variable
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(732): warning C4101: 'dx': unreferenced local variable
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(735): warning C4101: 'color_picker': unreferenced local variable
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(1077): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  LINK : C:\Users\Poi\Documents\GitHub\CS450_Project2\Sample\Sample\Debug\Sample.exe not found or not built by the last incremental link; performing full link
   Sample.vcxproj -> C:\Users\Poi\Documents\GitHub\CS450_Project2\Sample\Sample\Debug\Sample.exe

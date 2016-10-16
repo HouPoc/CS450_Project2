@@ -1,4 +1,5 @@
 bool	Distort;		// global -- true means to distort the texture
+bool	TextureOn;
 float	Time;
 
 struct point {
@@ -74,8 +75,8 @@ MjbSphere( float radius, int slices, int stacks )
 			p->nz = z;
 			if( Distort )
 			{
-					p->s = ((lng + M_PI) / (2.*M_PI)+ Time/(2.*M_PI));
-					p->t = ( lat + M_PI/2. ) / M_PI;
+				p->s = ((lng + M_PI) / (2.*M_PI) + Time);
+				p->t = ( lat + M_PI/2. ) / M_PI;
 			}
 			else
 			{
@@ -97,6 +98,7 @@ MjbSphere( float radius, int slices, int stacks )
 	// connect the north pole to the latitude NumLats-2:
 
 	glBegin( GL_QUADS );
+	glColor3f(0.45, 0.45, 0.45);
 	for( int ilng = 0; ilng < NumLngs-1; ilng++ )
 	{
 		p = PtsPointer( NumLats-1, ilng );
@@ -116,6 +118,7 @@ MjbSphere( float radius, int slices, int stacks )
 	// connect the south pole to the latitude 1:
 
 	glBegin( GL_QUADS );
+	glColor3f(0.45, 0.45, 0.45);
 	for( int ilng = 0; ilng < NumLngs-1; ilng++ )
 	{
 		p = PtsPointer( 0, ilng );
@@ -136,6 +139,7 @@ MjbSphere( float radius, int slices, int stacks )
 	// connect the other 4-sided polygons:
 
 	glBegin( GL_QUADS );
+	glColor3f(0.45, 0.45, 0.45);
 	for( int ilat = 2; ilat < NumLats-1; ilat++ )
 	{
 		for( int ilng = 0; ilng < NumLngs-1; ilng++ )

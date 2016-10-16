@@ -196,6 +196,7 @@ void	DoDepthMenu( int );
 void	DoDebugMenu( int );
 void	DoMainMenu( int );
 void	DoProjectMenu( int );
+void	DoTextureMenu(int);
 void	DoRasterString( float, float, float, char * );
 void	DoStrokeString( float, float, float, float, char * );
 float	ElapsedSeconds( );
@@ -259,7 +260,7 @@ main( int argc, char *argv[ ] )
 // this is typically where animation parameters are set
 //
 // do not call Display( ) from here -- let glutMainLoop( ) do it
-#define MS_PER_CYCLE 24000
+#define MS_PER_CYCLE 10000
 
 
 void
@@ -373,12 +374,16 @@ Display( )
 
 
 	// draw the current object:
-	Distort = TRUE;
-	glEnable(GL_TEXTURE_2D);
-	glBindTexture(GL_TEXTURE_2D, texName);
+	if (TextureOn) 
+	{
+		glEnable(GL_TEXTURE_2D);
+		glBindTexture(GL_TEXTURE_2D, texName);
+	}
 	MjbSphere(10.0, 50, 50);
-	glDisable(GL_TEXTURE_2D);
-
+	if (TextureOn)
+	{
+		glDisable(GL_TEXTURE_2D);
+	}
 	// draw some gratuitous text that just rotates on top of the scene:
 
 	glDisable( GL_DEPTH_TEST );
@@ -494,6 +499,27 @@ DoProjectMenu( int id )
 	glutPostRedisplay( );
 }
 
+void
+DoTextureMenu(int id)
+{
+	if (id == 0) 
+	{
+		TextureOn = TRUE;
+		Distort = FALSE;
+	}
+	else if (id == 2) 
+	{
+		TextureOn = TRUE;
+		Distort = TRUE;
+	}
+	else 
+	{
+		TextureOn = FALSE;
+		Distort = FALSE;
+	}
+	glutSetWindow(MainWindow);
+	glutPostRedisplay();
+}
 
 // use glut to display a string of characters using a raster font:
 
@@ -573,6 +599,11 @@ InitMenus( )
 	glutAddMenuEntry( "Orthographic",  ORTHO );
 	glutAddMenuEntry( "Perspective",   PERSP );
 
+	int texturemenu = glutCreateMenu(DoTextureMenu);
+	glutAddMenuEntry("Off", 1);
+	glutAddMenuEntry( "On", 0 );
+	glutAddMenuEntry("Distort", 2);
+
 	int mainmenu = glutCreateMenu( DoMainMenu );
 	glutAddSubMenu(   "Axes",          axesmenu);
 	glutAddSubMenu(   "Colors",        colormenu);
@@ -581,7 +612,7 @@ InitMenus( )
 	glutAddMenuEntry( "Reset",         RESET );
 	glutAddSubMenu(   "Debug",         debugmenu);
 	glutAddMenuEntry( "Quit",          QUIT );
-
+	glutAddSubMenu("Texture",		   texturemenu);
 // attach the pop-up menu to the right mouse button:
 
 	glutAttachMenu( GLUT_RIGHT_BUTTON );
@@ -845,6 +876,8 @@ Reset( )
 	WhichColor = WHITE;
 	WhichProjection = PERSP;
 	Xrot = Yrot = 0.;
+	Distort = FALSE;
+	TextureOn = FALSE;
 }
 
 
