@@ -10,10 +10,10 @@ c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(79): warning
 c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(80): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(84): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(85): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(705): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(703): warning C4101: 'dz': unreferenced local variable
-c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(703): warning C4101: 'dy': unreferenced local variable
-c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(703): warning C4101: 'dx': unreferenced local variable
-c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(706): warning C4101: 'color_picker': unreferenced local variable
-c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(1046): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-LINK : fatal error LNK1168: cannot open C:\Users\Poi\Documents\GitHub\CS450_Project2\Sample\Sample\Debug\Sample.exe for writing
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(703): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(701): warning C4101: 'dz': unreferenced local variable
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(701): warning C4101: 'dy': unreferenced local variable
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(701): warning C4101: 'dx': unreferenced local variable
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(704): warning C4101: 'color_picker': unreferenced local variable
+c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(1044): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Sample.vcxproj -> C:\Users\Poi\Documents\GitHub\CS450_Project2\Sample\Sample\Debug\Sample.exe

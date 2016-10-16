@@ -75,7 +75,7 @@ MjbSphere( float radius, int slices, int stacks )
 			if( Distort )
 			{
 					p->s = ((lng + M_PI) / (2.*M_PI)+ Time);
-					if (p->s > 1.0 )
+					if (p->s >= 1.0 )
 						p->s = p->s - 1.0;
 					p->t = ( lat + M_PI/2. ) / M_PI;
 			}
