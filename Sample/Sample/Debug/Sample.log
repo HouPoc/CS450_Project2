@@ -6,10 +6,9 @@ c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(65): warning
 c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(66): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(67): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(77): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(79): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(80): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(84): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(85): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(78): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(82): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\poi\documents\github\cs450_project2\sample\sample\sphere.h(83): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(703): warning C4305: 'initializing': truncation from 'double' to 'float'
 c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(701): warning C4101: 'dz': unreferenced local variable
 c:\users\poi\documents\github\cs450_project2\sample\sample\sample.cpp(701): warning C4101: 'dy': unreferenced local variable
