@@ -1,4 +1,5 @@
 bool	Distort;		// global -- true means to distort the texture
+float	Time;
 
 struct point {
 	float x, y, z;		// coordinates
@@ -73,8 +74,10 @@ MjbSphere( float radius, int slices, int stacks )
 			p->nz = z;
 			if( Distort )
 			{
-					p->s = 0;
-					p->t = 0;
+					p->s = ((lng + M_PI) / (2.*M_PI)+ Time);
+					if (p->s > 1.0 )
+						p->s = p->s - 1.0;
+					p->t = ( lat + M_PI/2. ) / M_PI;
 			}
 			else
 			{
